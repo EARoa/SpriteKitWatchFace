@@ -35,7 +35,8 @@ typedef enum : NSUInteger {
 	ThemeMarques,
 	ThemeVox,
 	ThemeSummer,
-	ThemeMAX
+	ThemeMAX,
+    ThemeRoa
 } Theme;
 
 typedef enum : NSUInteger {

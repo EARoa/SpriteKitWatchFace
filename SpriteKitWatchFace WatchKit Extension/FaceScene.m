@@ -87,7 +87,7 @@ CGFloat workingRadiusForFaceOfSizeWithAngle(CGSize faceSize, CGFloat angle)
 		self.theme = [[NSUserDefaults standardUserDefaults] integerForKey:@"Theme"];
 		self.useProgrammaticLayout = YES;
 		self.faceStyle = FaceStyleRound;
-		self.numeralStyle = NumeralStyleAll;
+        self.numeralStyle = NumeralStyleAll;
 		self.tickmarkStyle = TickmarkStyleAll;
 		self.majorTickmarkShape = TickmarkShapeRectangular;
 		self.minorTickmarkShape = TickmarkShapeRectangular;
@@ -782,6 +782,20 @@ CGFloat workingRadiusForFaceOfSizeWithAngle(CGSize faceSize, CGFloat angle)
 			self.useMasking = YES;
 			break;
 		}
+        case ThemeRoa:
+        {
+            colorRegionColor = [SKColor colorWithRed:0.07 green:0.15 blue:0.36 alpha:1.000];
+            ///            lightColor = [SKColor colorWithRed:0.23 green:0.44 blue:0.71 alpha:1.000];/
+            faceBackgroundColor = [SKColor colorWithRed:0.44 green:0.45 blue:0.45 alpha:1.000];
+            ///            inlayColor = [SKColor colorWithRed:0.90 green:0.72 blue:0.29 alpha:1.000];/
+            inlayColor = [SKColor colorWithRed:0.88 green:0.42 blue:0.22 alpha:1.000];
+            majorMarkColor = [SKColor colorWithRed:1.00 green:1.00 blue:1.00 alpha:1.000];
+            minorMarkColor = majorMarkColor;
+            handColor = majorMarkColor;
+            textColor = handColor;
+            secondHandColor = inlayColor;
+            break;
+        }
 		default:
 			break;
 	}
